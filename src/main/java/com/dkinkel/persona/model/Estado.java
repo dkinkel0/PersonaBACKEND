@@ -27,7 +27,11 @@ public class Estado {
 		this.pais = pais;
 		this.nombre = nombre;
 	}
-
+	
+	public Estado() {
+		// Constructor vacio
+	}
+	
 	public Long getId() {
 		return id;
 	}

@@ -20,6 +20,12 @@ public class PaisService implements PaisRepository{
 
 	@Autowired
 	private PaisRepository paisRepository;
+	
+	@Override
+	public List<Pais> findAll() {
+		// TODO Auto-generated method stub
+		return paisRepository.findAll();
+	}
 
 	@Override
 	public void flush() {
@@ -93,11 +99,7 @@ public class PaisService implements PaisRepository{
 		return null;
 	}
 
-	@Override
-	public List<Pais> findAll() {
-		// TODO Auto-generated method stub
-		return paisRepository.findAll();
-	}
+	
 
 	@Override
 	public List<Pais> findAllById(Iterable<Long> ids) {

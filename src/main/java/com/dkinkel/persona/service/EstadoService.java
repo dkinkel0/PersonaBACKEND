@@ -1,5 +1,6 @@
 package com.dkinkel.persona.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -25,6 +26,19 @@ public class EstadoService implements EstadoRepository{
 	@Autowired //Esto crea una inyeccion de de este elemento sin necesidad de crear una instancia (sin new EstadoRepository)
 	private EstadoRepository estadoRepository;
 
+	// creao un metodo
+	
+	public List<Estado> findAllByCountry(Long id){
+		List<Estado> estadoRespuesta= new ArrayList<Estado>();
+		List<Estado> estados = estadoRepository.findAll();
+		for (int i=0; i< estados.size(); i++) {
+			if (estados.get(i).getPais().getId()==id) {
+				estadoRespuesta.add(estados.get(i));
+			}
+		}
+		return estadoRespuesta;
+	}
+	
 	@Override
 	public void flush() {
 		// TODO Auto-generated method stub

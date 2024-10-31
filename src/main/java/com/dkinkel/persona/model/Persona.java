@@ -41,6 +41,10 @@ public class Persona {
 		this.pais = pais;
 		this.estado = estado;
 	}
+	
+	public Persona() {
+		//constructor vacio por default
+	}
 
 	// Gerenerar los Getters y Setters menu - Source - Generate Getters and
 	// Setters...
