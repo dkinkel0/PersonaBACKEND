@@ -13,7 +13,7 @@ import com.dkinkel.persona.model.Estado;
 import com.dkinkel.persona.service.EstadoService;
 
 @RestController
-@RequestMapping("/estado")
+@RequestMapping("/estados/")
 
 public class EstadoREST {
 	// creo una instancia de EstadoService

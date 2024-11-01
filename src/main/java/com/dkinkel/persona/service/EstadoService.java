@@ -26,7 +26,7 @@ public class EstadoService implements EstadoRepository{
 	@Autowired //Esto crea una inyeccion de de este elemento sin necesidad de crear una instancia (sin new EstadoRepository)
 	private EstadoRepository estadoRepository;
 
-	// creao un metodo
+	// creo un metodo
 	
 	public List<Estado> findAllByCountry(Long id){
 		List<Estado> estadoRespuesta= new ArrayList<Estado>();
