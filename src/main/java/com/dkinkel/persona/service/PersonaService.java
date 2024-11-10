@@ -16,15 +16,40 @@ import com.dkinkel.persona.model.Persona;
 import com.dkinkel.persona.repository.PersonaRepository;
 
 @Service
-public class PersonaService implements PersonaRepository{
+public class PersonaService implements PersonaRepository {
 
-	 @Autowired
-	 private PersonaRepository personaRepository;
-	
+	@Autowired
+	private PersonaRepository personaRepository;
+
+	@Override
+	public List<Persona> findAll() {
+		// TODO Auto-generated method stub
+		return personaRepository.findAll();
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		// TODO Auto-generated method stub
+		personaRepository.deleteById(id);
+	}
+
+	@Override
+	public void delete(Persona entity) {
+		// TODO Auto-generated method stub
+		personaRepository.delete(entity);
+
+	}
+
+	@Override
+	public <S extends Persona> S save(S entity) {
+		// aca declaramos el metodo save usando el repo
+		return personaRepository.save(entity);
+	}
+
 	@Override
 	public void flush() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -42,19 +67,19 @@ public class PersonaService implements PersonaRepository{
 	@Override
 	public void deleteAllInBatch(Iterable<Persona> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAllByIdInBatch(Iterable<Long> ids) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAllInBatch() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -94,19 +119,7 @@ public class PersonaService implements PersonaRepository{
 	}
 
 	@Override
-	public List<Persona> findAll() {
-		// TODO Auto-generated method stub
-		return personaRepository.findAll();
-	}
-
-	@Override
 	public List<Persona> findAllById(Iterable<Long> ids) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends Persona> S save(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -130,34 +143,21 @@ public class PersonaService implements PersonaRepository{
 	}
 
 	@Override
-	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
-		personaRepository.deleteById(id);
-	}
-
-	@Override
-	public void delete(Persona entity) {
-		// TODO Auto-generated method stub
-		personaRepository.delete(entity);
-		
-	}
-
-	@Override
 	public void deleteAllById(Iterable<? extends Long> ids) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll(Iterable<? extends Persona> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
