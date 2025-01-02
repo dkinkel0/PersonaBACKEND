@@ -24,12 +24,12 @@ public class PersonaREST {
 	private PersonaService personaService;
 
 	@GetMapping
-	private ResponseEntity<List<Persona>> getAllPersonas() {
+	public ResponseEntity<List<Persona>> getAllPersonas() {
 		return ResponseEntity.ok(personaService.findAll());
 	}
 
 	@PostMapping
-	private ResponseEntity<Persona> savePersona(@RequestBody Persona persona) {
+	public ResponseEntity<Persona> savePersona(@RequestBody Persona persona) {
 		try {
 			Persona personaGuardada = personaService.save(persona);
 			return ResponseEntity.created(new URI("/personas/" + personaGuardada.getId())).body(personaGuardada);

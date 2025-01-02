@@ -57,4 +57,6 @@ public class Estado {
 		this.nombre = nombre;
 	}
 
+	
+	
 }
