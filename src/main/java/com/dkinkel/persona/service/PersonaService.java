@@ -29,7 +29,6 @@ public class PersonaService implements PersonaRepository {
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
 		personaRepository.deleteById(id);
 	}
 
@@ -118,16 +117,16 @@ public class PersonaService implements PersonaRepository {
 		return null;
 	}
 
-	@Override
-	public List<Persona> findAllById(Iterable<Long> ids) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public List<Persona> findAllById(Long id) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 	@Override
 	public Optional<Persona> findById(Long id) {
-		// TODO Auto-generated method stub
-		return Optional.empty();
+		return personaRepository.findById(id);
+		
 	}
 
 	@Override
@@ -198,6 +197,12 @@ public class PersonaService implements PersonaRepository {
 
 	@Override
 	public <S extends Persona, R> R findBy(Example<S> example, Function<FetchableFluentQuery<S>, R> queryFunction) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Persona> findAllById(Iterable<Long> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
